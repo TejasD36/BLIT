@@ -39,6 +39,14 @@
                     <td style="border: 2px solid black; padding: 8px; text-align: center;">' . $row['password'] . '</td>
                     <td style="border: 2px solid black; padding: 8px; text-align: center;"><input type="radio" value="'.$row['id'].'" name="id"></td>
                     </tr>';
+                    if(isset($_POST['id'])){
+                        $id= $_POST['id'];
+                        echo '</div></form></body></html>';
+                        $sql2="DELETE FROM user WHERE id='$id'";
+                        mysqli_query($connection, $sql2);
+                        header('Location: admin.php');
+                        exit();
+                     }
         }
         
         echo '</table><br>
@@ -47,10 +55,5 @@
             </div>';
 
     }
-    if(isset($_POST['id'])){
-        $id= $_POST['id'];
-        echo '</div></form></body></html>';
-        $sql2="DELETE FROM user WHERE id='$id'";
-        mysqli_query($connection, $sql2);
-    }
+     
 ?>
