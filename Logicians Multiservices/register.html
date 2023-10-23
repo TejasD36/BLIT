@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="register.css">
+        <title>Registration</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h2>Registration</h2>
+            <form action="register.php" method="POST">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Enter your name" required="required" >
+                </div>
+                <div class="input-box">
+                    <input type="text" name="mn" placeholder="Enter mobile no" required="required" >
+                </div>
+                <div class="input-box">
+                    <input type="text" name="age" placeholder="Enter your age" required="required">
+                </div>
+                <div class="input-box">
+                    <input type="text" name="email" placeholder="Enter your email" required="required">
+                </div>
+                <div class="input-box">
+                    <input type="password" name="pwd" placeholder="Enter your password" required="required">
+                </div>
+                <div class="input-box">
+                    <input type="password" name="cpwd" placeholder="Confirm password" required="required">
+                </div>
+                <div class="policy">
+                    <input type="checkbox" required="required">
+                    <h3>I accept all terms & condition</h3>
+                </div>
+                <div class="input-box button">
+                    <input type="Submit" value="Register Now">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
